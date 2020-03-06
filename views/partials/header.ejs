@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <style>
+
+        <%- include('main.css') %>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <svg width="206px" height="39px" viewBox="0 0 206 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+                <title>Group 3 Copy 2</title>
+                <desc>Created with Sketch.</desc>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group-3-Copy-2" transform="translate(-1.000000, -15.000000)">
+                        <text id="tracker" font-family="OpenSans-Extrabold, Open Sans" font-size="50" font-weight="600" fill="white">
+                            <tspan x="0" y="53">tracker</tspan>
+                        </text>
+                        <circle id="Oval" fill="#FC709C" fill-rule="nonzero" cx="199.5" cy="45.5" r="7.5"></circle>
+                    </g>
+                </g>
+            </svg>
+            <ul>
+                <li><a <% if(title === 'Home'){ %> class='highlighted' 
+                    <% } %> href="/">Home</a></li>
+                <li><a <% if(title === 'Products'){ %> class='highlighted' 
+                    <% } %> href="/products">Products</a></li>
+                <li><a <% if(title === 'Expenses'){ %> class='highlighted' 
+                    <% } %> href="/expenses">Expenses</a></li>
+                <li><a <% if(title === 'Gallery'){ %> class='highlighted' 
+                    <% } %> href="/gallery">Gallery</a></li>
+            </ul>
+        </nav>
+        <div class=heading-wrapper>
+            <p>
+                <h1>Blog</h1>
+                <h2>Blog <br>
+                    post name</h2>
+            </p>
+        </div>
+    </header>

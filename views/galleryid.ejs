@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<div class="gallery">
+  <figure>
+   <% 
+  
+       for(x of gallery){ 
+        console.log(title,x.id);
+        if(x.id == title) {
+        %>
+        
+        <img src="../images/lrg/<%= x.fileName  %> " alt="<%= x.title %>">
+        <% break;}
+       }  %>
+    <figcaption><%= x.title %> <div><a href="<%= x.attribution.url %>"> <%= x.attribution.credit %></a> from <%= x.attribution.source %></div></figcaption>
+  </figure>
+</div>
+<%- include('partials/footer') %>

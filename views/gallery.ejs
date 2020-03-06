@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+  <div class="gallery">
+   <% 
+       for(x of gallery){ %>
+        <figure>
+        <a href="/gallery/<%= x.id  %> ">
+        <img src="../images/sm/<%= x.fileName  %> " alt="<%= x.title %>">
+        </a>
+        <figcaption><div><%= x.title  %></div><div><%= x.attribution.credit  %></div></figcaption>
+
+      </figure>
+        <%  }  %>
+    
+  </div>
+
+<%- include('partials/footer') %>
