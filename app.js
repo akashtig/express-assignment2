@@ -36,7 +36,7 @@ app.get('/gallery/:id',function(req, res, next) {
   for(x of gallery){
     if(x.id == req.params.id){
       res.render('galleryid',{title:`${req.params.id}`});
-      break;
+      return;
     }
   }  
   next();
