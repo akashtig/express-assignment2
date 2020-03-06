@@ -33,11 +33,12 @@ app.get('/gallery',function(req, res) {
 });
 
 app.get('/gallery/:id',function(req, res, next) {
-  gallery.foreach(function() {
-    if(this.id == req.params.id){
+  for(x of gallery){
+    if(x.id == req.params.id){
       res.render('galleryid',{title:`${req.params.id}`});
+      break;
     }
-  });  
+  }  
   next();
 });
 
